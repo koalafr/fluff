@@ -8,6 +8,11 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  width: 100vw;
+}
+
+body {
+  height: 100vh;
 }
 
 a {
@@ -19,12 +24,165 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer base {
+  :root {
+    --color-primary: theme(colors.rose.400);
+    --color-accent: theme(colors.rose.500);
+    --color-base: theme(colors.stone.900);
+    --color-light: theme(colors.stone.500 / 40%);
+    --color-inverted: theme(colors.white);
+    --color-secondary: theme(colors.orange.500);
+    --color-bg-left: theme(colors.rose.50);
+    --color-bg-right: theme(colors.rose.100);
   }
-  body {
-    color: white;
-    background: black;
+
+  /* themes ! */
+
+  .theme-fluff {
+    --color-primary: theme(colors.rose.400);
+    --color-accent: theme(colors.rose.500);
+    --color-base: theme(colors.stone.900);
+    --color-light: theme(colors.stone.500 / 40%);
+    --color-inverted: theme(colors.white);
+    --color-secondary: theme(colors.orange.500);
+    --color-bg-left: theme(colors.rose.50);
+    --color-bg-right: theme(colors.rose.100);
+  }
+
+  .theme-lime {
+    --color-primary: theme(colors.lime.500);
+    --color-accent: theme(colors.lime.600);
+    --color-base: theme(colors.zinc.900);
+    --color-light: theme(colors.zinc.500 / 40%);
+    --color-inverted: theme(colors.white);
+    --color-secondary: theme(colors.teal.600);
+    --color-bg-left: theme(colors.lime.50);
+    --color-bg-right: theme(colors.lime.100);
+  }
+
+  .theme-sky {
+    --color-primary: theme(colors.sky.500);
+    --color-accent: theme(colors.sky.600);
+    --color-base: theme(colors.slate.900);
+    --color-light: theme(colors.slate.500 / 40%);
+    --color-inverted: theme(colors.white);
+    --color-secondary: theme(colors.pink.600);
+    --color-bg-left: theme(colors.sky.50);
+    --color-bg-right: theme(colors.sky.100);
+  }
+
+  .theme-pro {
+    --color-primary: theme(colors.orange.400);
+    --color-accent: theme(colors.orange.500);
+    --color-base: theme(colors.slate.900);
+    --color-light: theme(colors.slate.500 / 40%);
+    --color-inverted: theme(colors.white);
+    --color-secondary: theme(colors.slate.400);
+    --color-bg-left: theme(colors.slate.50);
+    --color-bg-right: theme(colors.slate.100);
+  }
+
+  .theme-dark {
+    --color-primary: theme(colors.blue.400);
+    --color-accent: theme(colors.blue.500);
+    --color-base: theme(colors.zinc.50);
+    --color-light: theme(colors.zinc.600 / 40%);
+    --color-inverted: theme(colors.zinc.700);
+    --color-secondary: theme(colors.zinc.400);
+    --color-bg-left: theme(colors.zinc.900);
+    --color-bg-right: theme(colors.zinc.800);
+  }
+
+  /* add your theme here */
+
+  .bg {
+    background: linear-gradient(
+      90deg,
+      var(--color-bg-left) 60%,
+      var(--color-bg-right) 60%
+    );
+  }
+
+  hr {
+    border-color: var(--color-primary);
+  }
+
+  .link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(var(--color-base), var(--color-base));
+    background-size: 0 3px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.25s ease-in-out;
+  }
+
+  .link-underline-base {
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(var(--color-base), var(--color-base));
+  }
+
+  .link-underline-primary {
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(var(--color-primary), var(--color-primary));
+  }
+
+  .link-underline:hover {
+    background-size: 100% 3px;
+    background-position: 0 100%;
+  }
+
+  .text-shadow-base {
+    text-shadow: 1px 1px 2px var(--color-base), 0 0 1em var(--color-base),
+      0 0 0.2em var(--color-base);
+  }
+  .text-shadow-inverted {
+    text-shadow: 1px 1px 2px var(--color-inverted),
+      0 0 1em var(--color-inverted), 0 0 0.2em var(--color-inverted);
+  }
+
+  /* custom mdx styling */
+
+  .project {
+    color: var(--color-base);
+  }
+
+  .project h1,
+  .project h2,
+  .project h3 {
+    font-weight: bold;
+    line-height: 2em;
+    font-size: 1.2em;
+  }
+
+  .project h1 {
+    font-size: 1.4em;
+  }
+
+  .project a {
+    color: var(--color-primary);
+  }
+
+  .project code {
+    background-color: var(--color-light);
+    padding: 4px 10px;
+    border-radius: 8px;
+  }
+
+  .project a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+
+  .project p {
+    line-height: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .project ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 1em;
   }
 }

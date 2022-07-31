@@ -1,3 +1,65 @@
+## Fluff
+
+![img](screens/theme-fluff.png)
+
+Deployed here:
+
+[https://fluff.vercel.app/](https://fluff.vercel.app/)
+
+
+## Setup
+
+Start by **forking** this repo then clone it on your machine with nodejs installed.
+
+Go to the `fluff.config.js` file and start _naming_ your website and _write_ a description.
+
+You can change the author, it's you now, this code is MIT, just keep the License for other to find and go wild.
+
+Change the look and feel of the website in the `styles/globals.css` file, there are some themes, make your own.
+
+Replace the images in `public` with your assets, or grab some from [Pexels.com](https://pexels.com) like I did.
+
+Install the dependencies using `npm install`
+
+Start the server using `npm run dev`
+
+## This is my blog
+
+Write your own **projects.mdx** in `pages/projects/` and they will get sourced.
+
+_Link up_ an API for the blog, or use the projects code to start blogging in mdx.
+
+Add pages and links to the config AND translations, add social hooks.
+
+_Deploy_ your repo anywhere !
+
+## Going further
+
+Implement Searching, catégories, auto tag catégories, comments, code localized projects ...
+
+## Thanks !
+
+Send a screenshot to me [@koalabearfr](https://twitter.com/koalabearfr) on twitter and I'll add it to the repo
+
+## Themes
+
+theme-fluff
+![img](screens/theme-fluff.png)
+
+theme-lime
+![img](screens/theme-lime.png)
+
+theme-sky
+![img](screens/theme-sky.png)
+
+theme-pro
+![img](screens/theme-pro.png)
+
+theme-dark
+![img](screens/theme-dark.png)
+
+## Default Readme kept Below
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
